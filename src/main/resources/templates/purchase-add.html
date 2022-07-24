@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Purchase</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <h1>Make a purchase</h1>
+    <form action="/purchase/add" method="post">
+        <input type="number" name="userId" placeholder="Enter user id">
+        <input type="number" name="productId" placeholder="Enter product id">
+        <button type="submit">Make a purchase</button>
+    </form>
+    <br />
+    <a href="/">Back to Home Page</a>
+</div>
+</body>
+</html>

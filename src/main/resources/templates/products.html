@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Products</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Products</h1>
+
+    <!-- List of products -->
+    <div th:each="product: ${products}" style="display: flex">
+        <p th:text="${product.id}" style="display: inline; margin: 0" /> )&nbsp
+        <b th:text="${product.name}" />&nbsp-&nbsp $<i th:text="${product.price}" />
+    </div>
+    <br />
+    <a href="/">Back to Home Page</a>
+</body>
+</html>

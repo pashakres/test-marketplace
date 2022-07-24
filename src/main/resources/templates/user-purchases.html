@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Purchases</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>User's purchases</h1>
+    <a href="/purchase/byuser">By User</a>
+    <a href="/purchase/byproduct">By Product</a>
+
+    <form action="/purchase/byuser" method="post">
+        <input type="number" name="userId" placeholder="Enter user id">
+        <button type="submit">Add</button>
+    </form>
+
+    <!-- List of purchases -->
+    <div th:each="purchase: ${purchases}" style="display: flex">
+        <p th:text="${purchase.id}" style="display: inline; margin: 0" /> )&nbsp
+        User:&nbsp<b th:text="${purchase.userId}" />&nbsp-&nbspProduct:&nbsp<b th:text="${purchase.productId}" />
+    </div>
+
+    <br />
+    <a href="/">Back to Home Page</a>
+</body>
+</html>

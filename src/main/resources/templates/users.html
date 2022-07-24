@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Users</h1>
+    
+    <!-- List of users -->
+    <div th:each="user: ${users}" style="display: flex">
+        <p th:text="${user.id}" style="display: inline; margin: 0" /> )&nbsp
+        <b th:text="${user.firstName}" /> &nbsp <b th:text="${user.lastName}" />
+        &nbsp-&nbsp $<i th:text="${user.amountOfMoney}" />
+    </div>
+    <br />
+    <a href="/">Back to Home Page</a>
+</body>
+</html>
